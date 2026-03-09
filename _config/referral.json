@@ -2,8 +2,8 @@
   "referralCode": "nathan1n7q!FEB2-26-AR-L1",
   "linkTemplate": "https://revolut.com/referral/?referral-code={CODE}&geo-redirect",
   "campaign": {
-    "start": "2025-01-01",
-    "end": "2026-01-27",
+    "start": "2025-03-01",
+    "end": "2025-03-31",
     "description": "Offre de parrainage Revolut : conditions et récompense selon la campagne en cours."
   },
   "steps": [
