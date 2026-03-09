@@ -1,0 +1,31 @@
+{
+  "referralCode": "nathan1n7q!FEB2-26-AR-L1",
+  "linkTemplate": "https://revolut.com/referral/?referral-code={CODE}&geo-redirect",
+  "campaign": {
+    "start": "2025-01-01",
+    "end": "2026-01-27",
+    "description": "Offre de parrainage Revolut : conditions et récompense selon la campagne en cours."
+  },
+  "steps": [
+    {
+      "position": 1,
+      "name": "Ouvrir un compte avec le lien",
+      "text": "Cliquez sur le lien de parrainage et créez votre compte Revolut. Vérifiez votre identité (pièce d’identité)."
+    },
+    {
+      "position": 2,
+      "name": "Ajouter des fonds",
+      "text": "Ajoutez de l’argent sur votre compte par carte bancaire ou virement (les virements entre comptes Revolut ne comptent pas)."
+    },
+    {
+      "position": 3,
+      "name": "Commander une carte physique",
+      "text": "Commandez une carte Revolut physique (généralement livrée sous quelques jours)."
+    },
+    {
+      "position": 4,
+      "name": "Effectuer 3 achats",
+      "text": "Réalisez 3 paiements avec votre carte (virtuelle ou physique), d’au moins le montant minimum indiqué dans l’app (variable selon le pays). Les achats en ligne ou en magasin, Apple Pay et Google Pay comptent."
+    }
+  ]
+}

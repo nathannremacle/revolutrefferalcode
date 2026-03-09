@@ -1,0 +1,57 @@
+# Met à jour le lien de parrainage Revolut depuis _config/referral.json
+# et vérifie que le format d’URL est toujours celui attendu (optionnel).
+# Déclenché : tous les lundis 6h UTC + manuellement (workflow_dispatch).
+
+name: Update Revolut referral link
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-link:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Validate referral URL format (optional)
+        run: |
+          # Vérifier que la doc Revolut mentionne encore "referral-code" (format attendu)
+          if curl -sL -o /tmp/help.html "https://help.revolut.com/help/referrals/"; then
+            if grep -qi "referral-code\|referral code" /tmp/help.html; then
+              echo "Format de lien Revolut toujours valide (referral-code présent dans la doc)."
+            else
+              echo "::notice title=Format lien::La page d'aide Revolut a peut-être changé. Vérifiez _config/referral.json et linkTemplate."
+            fi
+          else
+            echo "::notice title=Validation::Impossible de récupérer la page d'aide Revolut (réseau ou 403). On continue."
+          fi
+
+      - name: Update referral link from config
+        run: node scripts/update-referral-link.js
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet; then
+            git add index.html README.md script.js 2>/dev/null || true
+            git add -u
+            git commit -m "chore: mettre à jour le lien de parrainage Revolut depuis _config/referral.json"
+            git push
+          else
+            echo "Aucun fichier modifié, pas de commit."
+          fi
