@@ -22,7 +22,7 @@ Voir `assets/README.md` pour le détail.
 
 ## Avant mise en ligne
 
-1. **Remplacez `YOUR-DOMAIN.com`** par votre domaine dans :
+1. **Remplacez `revolutrefferalcode.vercel.app`** par votre domaine dans :
    - `index.html` (canonical, hreflang, og:url, og:image, twitter:image, JSON-LD)
    - `robots.txt` (Sitemap)
    - `sitemap.xml` (`<loc>`)

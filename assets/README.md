@@ -19,6 +19,6 @@ Toutes les images du site sont dans **`assets/media/`**. Ce sont des copies des 
 ## Mise en ligne
 
 Les meta `og:image` et `twitter:image` pointent vers :
-`https://YOUR-DOMAIN.com/assets/media/og-image.png`
+`https://revolutrefferalcode.vercel.app/assets/media/og-image.png`
 
-Remplacez `YOUR-DOMAIN.com` par votre domaine dans `index.html`. Déployez le dossier **`assets/media`** avec le site.
+Remplacez `revolutrefferalcode.vercel.app` par votre domaine dans `index.html`. Déployez le dossier **`assets/media`** avec le site.

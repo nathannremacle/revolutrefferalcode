@@ -1,16 +1,17 @@
 {
-  "referralCode": "nathan1n7q!FEB2-26-AR-L1",
+  "referralCode": "nathan1n7q!MAR1-26-AR-L1",
   "linkTemplate": "https://revolut.com/referral/?referral-code={CODE}&geo-redirect",
   "campaign": {
     "start": "2025-03-01",
     "end": "2025-03-31",
-    "description": "Offre de parrainage Revolut : conditions et récompense selon la campagne en cours."
+    "reward": "50€",
+    "description": "Inscrivez-vous avec le lien avant le 31 mars, ajoutez des fonds, commandez une carte physique et effectuez 3 achats de 5€ minimum : vous recevez 50€."
   },
   "steps": [
     {
       "position": 1,
       "name": "Ouvrir un compte avec le lien",
-      "text": "Cliquez sur le lien de parrainage et créez votre compte Revolut. Vérifiez votre identité (pièce d’identité)."
+      "text": "Cliquez sur le lien de parrainage et créez votre compte Revolut avant le 31 mars. Vérifiez votre identité (pièce d’identité)."
     },
     {
       "position": 2,
@@ -24,8 +25,8 @@
     },
     {
       "position": 4,
-      "name": "Effectuer 3 achats",
-      "text": "Réalisez 3 paiements avec votre carte (virtuelle ou physique), d’au moins le montant minimum indiqué dans l’app (variable selon le pays). Les achats en ligne ou en magasin, Apple Pay et Google Pay comptent."
+      "name": "Effectuer 3 achats de 5€ minimum",
+      "text": "Réalisez 3 paiements avec votre carte (virtuelle ou physique) de 5€ minimum chacun. Les achats en ligne ou en magasin, Apple Pay et Google Pay comptent. Vous recevez 50€."
     }
   ]
 }
